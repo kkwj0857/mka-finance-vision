@@ -1,10 +1,10 @@
 export default {
-  darkMode: ["class"],
-
   content: [
     "./index.html",
-    "./src/**/*.{ts,tsx,js,jsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
+  darkMode: ["class"],
 
   theme: {
     extend: {
@@ -30,38 +30,28 @@ export default {
         accent: "hsl(var(--accent))",
         "accent-foreground": "hsl(var(--accent-foreground))",
 
-        destructive: "hsl(var(--destructive))",
-        "destructive-foreground": "hsl(var(--destructive-foreground))",
-
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
 
-        navy: "#071a3d",
+        navy: "#0a1f44",
         "navy-foreground": "#ffffff",
 
         gold: "#d4af37",
-        "gold-foreground": "#071a3d",
+        "gold-foreground": "#0a1f44",
 
-        charcoal: "#374151",
+        charcoal: "#4b5563",
       },
 
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
-        display: ["Fraunces", "serif"],
-      },
-
-      borderRadius: {
-        sm: "0.25rem",
-        md: "0.5rem",
-        lg: "0.75rem",
-        xl: "1rem",
+        display: ["Fraunces", "Georgia", "serif"],
       },
 
       boxShadow: {
-        elegant: "0 20px 60px rgba(0,0,0,0.15)",
-        card: "0 10px 30px rgba(0,0,0,0.08)",
-        gold: "0 10px 30px rgba(212,175,55,0.25)",
+        elegant: "0 25px 60px rgba(0,0,0,.10)",
+        card: "0 15px 35px rgba(0,0,0,.08)",
+        gold: "0 12px 30px rgba(212,175,55,.25)",
       },
     },
   },
