@@ -87,6 +87,21 @@
   --gradient-hero-overlay: linear-gradient(135deg, oklch(0.18 0.05 260 / 0.92) 0%, oklch(0.22 0.06 265 / 0.78) 60%, oklch(0.22 0.06 265 / 0.55) 100%);
 }
 
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-border: #e2e8f0;
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-display: ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --color-background: #0b1220;
+  --color-foreground: #f8fafc;
+  --color-border: #1e293b;
+}
+
 @layer base {
   * { border-color: var(--color-border); }
 
