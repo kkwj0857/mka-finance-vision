@@ -1,133 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* =========================
-   PREMIUM BRAND TOKENS
-========================= */
 :root {
   --background: 210 20% 98%;
   --foreground: 222 47% 11%;
-
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-
   --primary: 221 83% 16%;
   --primary-foreground: 0 0% 100%;
-
   --secondary: 210 25% 96%;
   --secondary-foreground: 222 47% 11%;
-
   --muted: 210 20% 96%;
   --muted-foreground: 215 16% 46%;
-
   --accent: 45 74% 52%;
   --accent-foreground: 221 83% 16%;
-
   --border: 214 22% 90%;
   --input: 214 22% 90%;
   --ring: 45 74% 52%;
 }
 
-/* =========================
-   BASE
-========================= */
-@layer base {
-  * {
-    border-color: hsl(var(--border));
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-
-  h1,h2,h3,h4 {
-    font-family: Fraunces, Georgia, serif;
-    letter-spacing: -0.03em;
-    font-weight: 500;
-  }
-
-  h1 {
-    font-size: clamp(3rem, 7vw, 5.75rem);
-    line-height: 1.02;
-  }
-
-  h2 {
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    line-height: 1.05;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
-
-  p {
-    line-height: 1.7;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-/* =========================
-   UTILITIES
-========================= */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body {
+  margin: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: hsl(var(--border));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Fraunces, Georgia, serif;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.gold-rule {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #f2d57a);
+}
+
+.card-hover {
+  transition: all 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.reveal {
+  animation: fadeUp 0.8s ease both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
   }
 
-  .text-pretty {
-    text-wrap: pretty;
-  }
-
-  .section {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-
-  @media (min-width: 1024px) {
-    .section {
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-    }
-  }
-
-  .gold-rule {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg,#d4af37,#f2d57a);
-  }
-
-  .card-hover {
-    transition: all .35s ease;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(0,0,0,.08);
-  }
-
-  .reveal {
-    animation: fadeUp .8s ease both;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
