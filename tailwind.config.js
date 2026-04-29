@@ -9,53 +9,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--color-background)",
-        foreground: "var(--color-foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
 
-        card: "var(--color-card)",
-        "card-foreground": "var(--color-card-foreground)",
+        card: "hsl(var(--card))",
+        "card-foreground": "hsl(var(--card-foreground))",
 
-        muted: "var(--color-muted)",
-        "muted-foreground": "var(--color-muted-foreground)",
+        popover: "hsl(var(--popover))",
+        "popover-foreground": "hsl(var(--popover-foreground))",
 
-        border: "var(--color-border)",
+        primary: "hsl(var(--primary))",
+        "primary-foreground": "hsl(var(--primary-foreground))",
 
-        primary: "var(--color-primary)",
-        "primary-foreground": "var(--color-primary-foreground)",
+        secondary: "hsl(var(--secondary))",
+        "secondary-foreground": "hsl(var(--secondary-foreground))",
 
-        secondary: "var(--color-secondary)",
-        "secondary-foreground": "var(--color-secondary-foreground)",
+        muted: "hsl(var(--muted))",
+        "muted-foreground": "hsl(var(--muted-foreground))",
 
-        accent: "var(--color-accent)",
-        "accent-foreground": "var(--color-accent-foreground)",
+        accent: "hsl(var(--accent))",
+        "accent-foreground": "hsl(var(--accent-foreground))",
 
-        destructive: "var(--color-destructive)",
-        "destructive-foreground": "var(--color-destructive-foreground)",
+        destructive: "hsl(var(--destructive))",
+        "destructive-foreground": "hsl(var(--destructive-foreground))",
 
-        ring: "var(--color-ring)",
-
-        // Brand system (THIS is what your UI is using)
-        navy: "var(--navy)",
-        gold: "var(--gold)",
-        charcoal: "var(--charcoal)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
       },
 
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        display: ["var(--font-display)"],
+        sans: ["ui-sans-serif", "system-ui"],
       },
 
       borderRadius: {
-        sm: "var(--radius-sm)",
-        md: "var(--radius-md)",
-        lg: "var(--radius-lg)",
-        xl: "var(--radius-xl)",
-      },
-
-      boxShadow: {
-        elegant: "var(--shadow-elegant)",
-        card: "var(--shadow-card)",
-        gold: "var(--shadow-gold)",
+        sm: "0.3rem",
+        md: "0.5rem",
+        lg: "0.75rem",
+        xl: "1rem",
       },
     },
   },
