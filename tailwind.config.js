@@ -1,16 +1,13 @@
-import type { Config } from "tailwindcss";
-
-export default {
+module.exports = {
   darkMode: ["class"],
+
   content: [
     "./index.html",
     "./src/**/*.{ts,tsx,js,jsx}",
   ],
+
   theme: {
     extend: {
-      /* =========================
-         COLORS (DESIGN SYSTEM)
-      ========================= */
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -40,41 +37,34 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
 
-        /* =========================
-           BRAND SYSTEM (IMPORTANT)
-        ========================= */
-        navy: "var(--navy)",
-        gold: "var(--gold)",
-        charcoal: "var(--charcoal)",
+        navy: "#071a3d",
+        "navy-foreground": "#ffffff",
+
+        gold: "#d4af37",
+        "gold-foreground": "#071a3d",
+
+        charcoal: "#374151",
       },
 
-      /* =========================
-         TYPOGRAPHY SYSTEM
-      ========================= */
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        display: ["var(--font-display)"],
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        display: ["Fraunces", "serif"],
       },
 
-      /* =========================
-         BORDER RADIUS SCALE
-      ========================= */
       borderRadius: {
-        sm: "0.3rem",
+        sm: "0.25rem",
         md: "0.5rem",
         lg: "0.75rem",
         xl: "1rem",
       },
 
-      /* =========================
-         SHADOW SYSTEM
-      ========================= */
       boxShadow: {
-        elegant: "var(--shadow-elegant)",
-        card: "var(--shadow-card)",
-        gold: "var(--shadow-gold)",
+        elegant: "0 20px 60px rgba(0,0,0,0.15)",
+        card: "0 10px 30px rgba(0,0,0,0.08)",
+        gold: "0 10px 30px rgba(212,175,55,0.25)",
       },
     },
   },
+
   plugins: [],
-} satisfies Config;
+};
