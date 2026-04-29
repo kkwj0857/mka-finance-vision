@@ -1,9 +1,7 @@
 /* =========================
-   TAILWIND ENTRY
+   TAILWIND ENTRY (v4 correct)
 ========================= */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* =========================
    DESIGN TOKENS
@@ -11,7 +9,6 @@
 :root {
   --radius: 0.5rem;
 
-  /* base colors (HSL system) */
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
 
@@ -83,7 +80,7 @@
   }
 
   /* =========================
-     LOVABLE TYPOGRAPHY SYSTEM
+     TYPOGRAPHY SYSTEM
   ========================= */
   h1 {
     font-size: clamp(2.8rem, 5vw, 4.8rem);
@@ -109,7 +106,7 @@
 }
 
 /* =========================
-   LAYOUT UTILITIES
+   UTILITIES
 ========================= */
 @layer utilities {
   .text-balance {
@@ -120,7 +117,7 @@
     text-wrap: pretty;
   }
 
-  /* Lovable-style section spacing */
+  /* Section spacing rhythm */
   .section {
     padding-top: 9rem;
     padding-bottom: 9rem;
@@ -133,7 +130,7 @@
     }
   }
 
-  /* subtle fade-in feel */
+  /* Reveal animation */
   .reveal {
     opacity: 0;
     transform: translateY(24px);

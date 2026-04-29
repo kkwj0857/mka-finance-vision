@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      /* =========================
+         COLORS (DESIGN SYSTEM)
+      ========================= */
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -36,17 +39,40 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+
+        /* =========================
+           BRAND SYSTEM (IMPORTANT)
+        ========================= */
+        navy: "var(--navy)",
+        gold: "var(--gold)",
+        charcoal: "var(--charcoal)",
       },
 
+      /* =========================
+         TYPOGRAPHY SYSTEM
+      ========================= */
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui"],
+        sans: ["var(--font-sans)"],
+        display: ["var(--font-display)"],
       },
 
+      /* =========================
+         BORDER RADIUS SCALE
+      ========================= */
       borderRadius: {
         sm: "0.3rem",
         md: "0.5rem",
         lg: "0.75rem",
         xl: "1rem",
+      },
+
+      /* =========================
+         SHADOW SYSTEM
+      ========================= */
+      boxShadow: {
+        elegant: "var(--shadow-elegant)",
+        card: "var(--shadow-card)",
+        gold: "var(--shadow-gold)",
       },
     },
   },
